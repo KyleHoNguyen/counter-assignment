@@ -1,0 +1,45 @@
+b7b2102d228af269516e58a8c596de64
+"use strict";
+
+var _interopRequireDefault = require("C:/Users/ksmar/Documents/1. School/Fall 2024/CIS4930/counter-assignment/node_modules/@babel/runtime/helpers/interopRequireDefault.js").default;
+var _react = require("@testing-library/react");
+var _Counter = _interopRequireDefault(require("../components/Counter"));
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _jsxFileName = "C:\\Users\\ksmar\\Documents\\1. School\\Fall 2024\\CIS4930\\counter-assignment\\src\\tests\\Counter.test.js";
+beforeEach(() => {
+  // Render the Counter component here
+  (0, _react.render)( /*#__PURE__*/(0, _jsxDevRuntime.jsxDEV)(_Counter.default, {}, void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 7,
+    columnNumber: 10
+  }, void 0));
+});
+test('renders counter message', () => {
+  // Complete the unit test below based on the objective in the line above
+  const counterMessage = _react.screen.getByText(/counter/i);
+  expect(counterMessage).toBeInTheDocument();
+});
+test('should render initial count with value of 0', () => {
+  // Complete the unit test below based on the objective in the line above
+  const count = _react.screen.getByText(/count: 0/i);
+  expect(count).toBeInTheDocument();
+});
+test('clicking + increments the count', () => {
+  // Complete the unit test below based on the objective in the line above
+  const incrementButton = _react.screen.getByText('+');
+  _react.fireEvent.click(incrementButton);
+
+  // Check if the count is incremented to 1
+  const count = _react.screen.getByText(/count: 1/i);
+  expect(count).toBeInTheDocument();
+});
+test('clicking - decrements the count', () => {
+  // Complete the unit test below based on the objective in the line above
+  const decrementButton = _react.screen.getByText('-');
+  _react.fireEvent.click(decrementButton);
+
+  // Check if the count is decremented to -1
+  const count = _react.screen.getByText(/count: -1/i);
+  expect(count).toBeInTheDocument();
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJiZWZvcmVFYWNoIiwicmVuZGVyIiwidGVzdCIsImNvdW50ZXJNZXNzYWdlIiwic2NyZWVuIiwiZ2V0QnlUZXh0IiwiZXhwZWN0IiwidG9CZUluVGhlRG9jdW1lbnQiLCJjb3VudCIsImluY3JlbWVudEJ1dHRvbiIsImZpcmVFdmVudCIsImNsaWNrIiwiZGVjcmVtZW50QnV0dG9uIl0sInNvdXJjZXMiOlsiQ291bnRlci50ZXN0LmpzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGltcG9ydCBuZWNlc3NhcnkgcmVhY3QgdGVzdGluZyBsaWJyYXJ5IGhlbHBlcnMgaGVyZVxyXG5pbXBvcnQgeyByZW5kZXIsIHNjcmVlbiwgZmlyZUV2ZW50IH0gZnJvbSAnQHRlc3RpbmctbGlicmFyeS9yZWFjdCc7XHJcbi8vIGltcG9ydCB0aGUgQ291bnRlciBjb21wb25lbnQgaGVyZVxyXG5pbXBvcnQgQ291bnRlciBmcm9tICcuLi9jb21wb25lbnRzL0NvdW50ZXInO1xyXG5iZWZvcmVFYWNoKCgpID0+IHtcclxuICAvLyBSZW5kZXIgdGhlIENvdW50ZXIgY29tcG9uZW50IGhlcmVcclxuICByZW5kZXIoPENvdW50ZXIgLz4pO1xyXG59KVxyXG5cclxudGVzdCgncmVuZGVycyBjb3VudGVyIG1lc3NhZ2UnLCAoKSA9PiB7XHJcbiAgLy8gQ29tcGxldGUgdGhlIHVuaXQgdGVzdCBiZWxvdyBiYXNlZCBvbiB0aGUgb2JqZWN0aXZlIGluIHRoZSBsaW5lIGFib3ZlXHJcbiAgY29uc3QgY291bnRlck1lc3NhZ2UgPSBzY3JlZW4uZ2V0QnlUZXh0KC9jb3VudGVyL2kpO1xyXG4gIGV4cGVjdChjb3VudGVyTWVzc2FnZSkudG9CZUluVGhlRG9jdW1lbnQoKTtcclxufSk7XHJcblxyXG50ZXN0KCdzaG91bGQgcmVuZGVyIGluaXRpYWwgY291bnQgd2l0aCB2YWx1ZSBvZiAwJywgKCkgPT4ge1xyXG4gIC8vIENvbXBsZXRlIHRoZSB1bml0IHRlc3QgYmVsb3cgYmFzZWQgb24gdGhlIG9iamVjdGl2ZSBpbiB0aGUgbGluZSBhYm92ZVxyXG4gIGNvbnN0IGNvdW50ID0gc2NyZWVuLmdldEJ5VGV4dCgvY291bnQ6IDAvaSk7XHJcbiAgZXhwZWN0KGNvdW50KS50b0JlSW5UaGVEb2N1bWVudCgpO1xyXG59KTtcclxuXHJcbnRlc3QoJ2NsaWNraW5nICsgaW5jcmVtZW50cyB0aGUgY291bnQnLCAoKSA9PiB7XHJcbiAgLy8gQ29tcGxldGUgdGhlIHVuaXQgdGVzdCBiZWxvdyBiYXNlZCBvbiB0aGUgb2JqZWN0aXZlIGluIHRoZSBsaW5lIGFib3ZlXHJcbiAgY29uc3QgaW5jcmVtZW50QnV0dG9uID0gc2NyZWVuLmdldEJ5VGV4dCgnKycpO1xyXG4gIGZpcmVFdmVudC5jbGljayhpbmNyZW1lbnRCdXR0b24pO1xyXG4gIFxyXG4gIC8vIENoZWNrIGlmIHRoZSBjb3VudCBpcyBpbmNyZW1lbnRlZCB0byAxXHJcbiAgY29uc3QgY291bnQgPSBzY3JlZW4uZ2V0QnlUZXh0KC9jb3VudDogMS9pKTtcclxuICBleHBlY3QoY291bnQpLnRvQmVJblRoZURvY3VtZW50KCk7XHJcbn0pO1xyXG5cclxudGVzdCgnY2xpY2tpbmcgLSBkZWNyZW1lbnRzIHRoZSBjb3VudCcsICgpID0+IHtcclxuICAvLyBDb21wbGV0ZSB0aGUgdW5pdCB0ZXN0IGJlbG93IGJhc2VkIG9uIHRoZSBvYmplY3RpdmUgaW4gdGhlIGxpbmUgYWJvdmVcclxuICBjb25zdCBkZWNyZW1lbnRCdXR0b24gPSBzY3JlZW4uZ2V0QnlUZXh0KCctJyk7XHJcbiAgZmlyZUV2ZW50LmNsaWNrKGRlY3JlbWVudEJ1dHRvbik7XHJcbiAgXHJcbiAgLy8gQ2hlY2sgaWYgdGhlIGNvdW50IGlzIGRlY3JlbWVudGVkIHRvIC0xXHJcbiAgY29uc3QgY291bnQgPSBzY3JlZW4uZ2V0QnlUZXh0KC9jb3VudDogLTEvaSk7XHJcbiAgZXhwZWN0KGNvdW50KS50b0JlSW5UaGVEb2N1bWVudCgpO1xyXG59KTtcclxuIl0sIm1hcHBpbmdzIjoiOzs7QUFDQTtBQUVBO0FBQTRDO0FBQUE7QUFDNUNBLFVBQVUsQ0FBQyxNQUFNO0VBQ2Y7RUFDQSxJQUFBQyxhQUFNLGdCQUFDLDJCQUFDLGdCQUFPO0lBQUE7SUFBQTtJQUFBO0VBQUEsVUFBRyxDQUFDO0FBQ3JCLENBQUMsQ0FBQztBQUVGQyxJQUFJLENBQUMseUJBQXlCLEVBQUUsTUFBTTtFQUNwQztFQUNBLE1BQU1DLGNBQWMsR0FBR0MsYUFBTSxDQUFDQyxTQUFTLENBQUMsVUFBVSxDQUFDO0VBQ25EQyxNQUFNLENBQUNILGNBQWMsQ0FBQyxDQUFDSSxpQkFBaUIsRUFBRTtBQUM1QyxDQUFDLENBQUM7QUFFRkwsSUFBSSxDQUFDLDZDQUE2QyxFQUFFLE1BQU07RUFDeEQ7RUFDQSxNQUFNTSxLQUFLLEdBQUdKLGFBQU0sQ0FBQ0MsU0FBUyxDQUFDLFdBQVcsQ0FBQztFQUMzQ0MsTUFBTSxDQUFDRSxLQUFLLENBQUMsQ0FBQ0QsaUJBQWlCLEVBQUU7QUFDbkMsQ0FBQyxDQUFDO0FBRUZMLElBQUksQ0FBQyxpQ0FBaUMsRUFBRSxNQUFNO0VBQzVDO0VBQ0EsTUFBTU8sZUFBZSxHQUFHTCxhQUFNLENBQUNDLFNBQVMsQ0FBQyxHQUFHLENBQUM7RUFDN0NLLGdCQUFTLENBQUNDLEtBQUssQ0FBQ0YsZUFBZSxDQUFDOztFQUVoQztFQUNBLE1BQU1ELEtBQUssR0FBR0osYUFBTSxDQUFDQyxTQUFTLENBQUMsV0FBVyxDQUFDO0VBQzNDQyxNQUFNLENBQUNFLEtBQUssQ0FBQyxDQUFDRCxpQkFBaUIsRUFBRTtBQUNuQyxDQUFDLENBQUM7QUFFRkwsSUFBSSxDQUFDLGlDQUFpQyxFQUFFLE1BQU07RUFDNUM7RUFDQSxNQUFNVSxlQUFlLEdBQUdSLGFBQU0sQ0FBQ0MsU0FBUyxDQUFDLEdBQUcsQ0FBQztFQUM3Q0ssZ0JBQVMsQ0FBQ0MsS0FBSyxDQUFDQyxlQUFlLENBQUM7O0VBRWhDO0VBQ0EsTUFBTUosS0FBSyxHQUFHSixhQUFNLENBQUNDLFNBQVMsQ0FBQyxZQUFZLENBQUM7RUFDNUNDLE1BQU0sQ0FBQ0UsS0FBSyxDQUFDLENBQUNELGlCQUFpQixFQUFFO0FBQ25DLENBQUMsQ0FBQyJ9
